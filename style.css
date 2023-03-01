@@ -5,8 +5,19 @@ body{
     flex-direction: column;
     align-items: center;
 }
+.main{
+  display: flex;
+  border: 5px solid brown;
+  border-radius: 50px;
+  height: 700px;
+  width: 700px;
+  flex-direction: column;
+  align-items: center;
+  background-color: red;
+}
 #container{
-    border: 5px solid black;
+    border: 5px solid brown;
+    border-radius: 20px;
     background-color: white;
     height: 500px;
     width: 500px;
@@ -18,16 +29,43 @@ body{
 .buttons{
   display: flex;
   flex:1 1 auto;
-  border: 2px solid blac;
   width: 500px;
   height: 50px;
-  /*align-items: center;*/
+  align-items: center;
   justify-content: center;
   padding: 10px;
   gap: 10px;
 }
+.colorChoise-container{
+  display: flex;
+  flex: 1 1 0;
+  margin-left: 0;
+  width: 700px;
+}
+.colorChoise{
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+h1{
+  color:gold;
+  font-size: 50px;
+  margin: 15px;
+}
 button{
   color: black;
-  background-color: orange;
-  border: 0px solid blac;
+  background-color: gold;
+  width: 60px;
+}
+.color{
+  color: black;
+  background-color: gold;
+  height: 50px;
+}
+.input{
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

@@ -6,12 +6,23 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Etch a sketch</h1>
-        <div id="container">
-        </div>
-        <div class="buttons">
-            <!--<button onclick="boxSize()">box size</button>-->
-            <button onclick="refreshBox()">Grid size</button>
+        <div class="main">
+            <h1>Etch a sketch</h1>
+            <div class="colorChoise-container">
+                <div class="colorChoise">
+                    <button class='color' onclick="changeColor('black')">Black</button>
+                    <button class='color' onclick="changeColor('red')">Red</button>
+                    <button class="color" onclick="changeColor('blue')">Blue</button>
+                    <button class='color' onclick="changeColor('white')">Erase</button>
+                </div>
+                <div id="container"></div>
+            </div>
+            <div class="buttons">
+                <div class="input">
+                    <input type="text" placeholder="Size of Board" onchange="changeSize(this.value)"/>
+                    <button class="size">Set size</button>
+                </div>             
+            </div>
         </div>
         <script src="eas.js" defer></script>
     </body>

@@ -1,18 +1,17 @@
 const container = document.querySelector('#container')
 
-function refreshBox(){
+let colorChoise = 'black';
+
+function refreshBox(){   
     let del = document.getElementById('container');
     while (del.hasChildNodes()){
         del.removeChild(del.firstChild);
     }
-    boxSize();
 }
 
-function boxSize(){
+function boxSize(num){
 
-let num = Number(prompt('How many pixels'));
-//let num = 16
-
+refreshBox()
 if (num>100){
     alert('ERROR, you can\'t do more than 100 pixels, reload the website and try again')
 }else{
@@ -20,9 +19,7 @@ let pixSize = 500/num
 qpix=num*num
 for(let i=0;i<qpix;i++){
     const pix = document.createElement('div')
-    pix.addEventListener('mouseover', () => {
-        pix.style.backgroundColor = 'red';
-    })
+    pix.addEventListener('mouseover', colorSquare);
     pix.classList.add('pixels')
     pix.style.cssText='border: 0px solid black;'
     pix.style.height= `${pixSize}px`;
@@ -33,3 +30,13 @@ for(let i=0;i<qpix;i++){
 }
 }
 
+function changeSize(input){
+    boxSize(input)
+}
+
+function colorSquare() {
+    this.style.backgroundColor = colorChoise;
+}
+ function changeColor(choise){
+    colorChoise = choise;
+ }
